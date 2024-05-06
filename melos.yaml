@@ -1,0 +1,61 @@
+name: stutor-workspace
+
+packages:
+  - flutter_playground_app
+  - flutter_shared
+
+scripts:
+  analyze:
+    name: Run dart analyze on all packages
+    description: Run dart analyze on all packages
+    exec: flutter analyze
+
+  build_runner:
+    name: Run build_runner on all packages
+    description: Run build_runner on all packages
+    exec: flutter pub run build_runner build --delete-conflicting-outputs
+
+  clean:
+    name: Clean all packages
+    description: Clean all packages
+    exec: flutter clean
+
+  clean_pub_get:
+    name: Clean all packages and run pub get
+    description: Clean all packages and run pub get
+    exec: flutter clean && flutter pub get
+  
+  fix:
+    name: Run dart fix on all packages
+    description: Run dart fix on all packages
+    exec: dart fix --apply
+
+  format:
+    name: Run dart format on all packages
+    description: Run dart format on all packages
+    exec: dart format . --line-length 120
+
+  pod_delete:
+    name: Delete Podfile.lock
+    description: Delete Podfile.lock
+    exec: rm ios/Podfile.lock
+
+  pub_get:
+    name: Run pub get on all packages
+    description: Run pub get on all packages
+    exec: flutter pub get
+
+  pub_upgrade:
+    name: Run pub upgrade on all packages
+    description: Run pub upgrade on all packages
+    exec: flutter pub upgrade
+
+  test:
+    name: Run flutter test on all packages
+    description: Run flutter test on all packages
+    exec: flutter test
+
+  upgrade:
+    name: Run flutter upgrade on all packages
+    description: Run flutter upgrade on all packages
+    exec: flutter pub upgrade

@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo ""
+echo "Running dart format on staged files..."
+echo ""
+
+sh ./scripts/format_changes.sh
+
+echo ""
+echo ""
+echo "Running dart fix --apply on staged files..."
+echo ""
+
+sh ./scripts/fix_changes.sh
+
+echo ""
+echo ""
+echo "Running dart analyze on staged files..."
+echo ""
+
+sh ./scripts/analyze_changes.sh
+
+# echo ""
+# echo "Running dart test on staged files..."
+# echo ""

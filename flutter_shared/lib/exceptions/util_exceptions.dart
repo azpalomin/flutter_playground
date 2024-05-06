@@ -1,0 +1,1 @@
+class LostConnectionException implements Exception {}

@@ -45,8 +45,10 @@ A basic Flutter app to showcase some of my skills and test things. It has an app
 ## Getting started
 - At the root directory run
   - `flutter pub get`
-- Then melos can be used 
+- Then melos can be used to update the multiple packages or it can be done manually
+  - `dart pub global activate melos`
   - `melos run pub_get`
+
 
 ## Turn on Husky for precommits
 `dart run husky install`

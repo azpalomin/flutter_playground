@@ -52,7 +52,13 @@ class _InfiniteListBuilderState extends State<InfiniteListBuilder> {
             );
           }
           if (_hasError) {
-            return widget.errorItem(() => _fetch(_data!.length, widget.perRequest));
+            return widget.errorItem(() async {
+              setState(() {
+                _isLoading = true;
+                _hasError = false;
+              });
+              await _fetch(_data!.length, widget.perRequest);
+            });
           }
           if (_isLastPage) {
             return widget.endOfListItem;
@@ -87,6 +93,7 @@ class _InfiniteListBuilderState extends State<InfiniteListBuilder> {
       });
     } catch (e) {
       setState(() {
+        _data ??= [];
         _hasError = true;
         _isLoading = false;
       });

@@ -5,7 +5,7 @@ class PageContainer extends StatelessWidget {
   final PreferredSizeWidget? appBar;
   final Widget body;
   final Widget? bottomNavigationBar;
-  final double? maxWidth;
+  final double maxWidth;
   final bool showBackground;
   final bool showBottomSafeArea;
   final bool showTopSafeArea;
@@ -36,21 +36,32 @@ class PageContainer extends StatelessWidget {
               backgroundColor: Colors.transparent,
               bottomNavigationBar: bottomNavigationBar,
               resizeToAvoidBottomInset: true,
-              body: ConstrainedBox(
-                constraints: BoxConstraints(
-                  maxWidth: maxWidth ?? double.infinity,
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    bottom: bottomNavigationBar == null && showBottomSafeArea
-                        ? MediaQuery.of(context).viewInsets.bottom + MediaQuery.of(context).viewPadding.bottom
-                        : 0,
-                    top: appBar == null && showTopSafeArea
-                        ? MediaQuery.of(context).viewPadding.top + MediaQuery.of(context).padding.top
-                        : 0,
+              body: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Expanded(
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            maxWidth: maxWidth,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              bottom: bottomNavigationBar == null && showBottomSafeArea
+                                  ? MediaQuery.of(context).viewInsets.bottom + MediaQuery.of(context).viewPadding.bottom
+                                  : 0,
+                              top: appBar == null && showTopSafeArea
+                                  ? MediaQuery.of(context).viewPadding.top + MediaQuery.of(context).padding.top
+                                  : 0,
+                            ),
+                            child: body,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  child: body,
-                ),
+                ],
               ),
             ),
           ),

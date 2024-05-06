@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/models/stock_data_entry.dart';
 import 'package:flutter_playground/services/data/stock_data_service.dart';
+import 'package:flutter_shared/widgets/buttons/custom_cursor.dart';
 import 'package:flutter_shared/widgets/containers/page_container.dart';
 import 'package:flutter_shared/widgets/lists/infinite_list_builder.dart';
 
@@ -29,15 +30,19 @@ class _InfiniteLoadingViewState extends State<InfiniteLoadingView> {
           title: Text('No More items'),
         ),
         errorItem: (fetchAgain) {
-          return const ListTile(
-            title: Text('Error occured'),
+          return ListTile(
+            title: const Text('Error occured'),
+            trailing: CustomCursor(
+              onTap: () async => await fetchAgain(),
+              child: const Text('Try Again'),
+            ),
           );
         },
         fetch: (int offset, int limit) async => await StockDataService.getData(
           offset: offset,
           limit: limit,
         ),
-        initialRequestLimit: 30,
+        initialRequestLimit: 50,
         listItem: (dynamic value) {
           StockDataEntry entry = value as StockDataEntry;
           return ListTile(
@@ -53,8 +58,8 @@ class _InfiniteLoadingViewState extends State<InfiniteLoadingView> {
             trailing: Text('Volume: ${entry.volume}'),
           );
         },
-        perRequest: 10,
-        triggerPoint: 5,
+        perRequest: 30,
+        triggerPoint: 10,
       ),
     );
   }

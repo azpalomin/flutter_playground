@@ -16,8 +16,8 @@ A basic Flutter app to showcase some of my skills and test things. It has an app
 - Install Xcode
 
 # How to run 
-`cd ./flutter_playground_app`
-`flutter run`
+- `cd ./flutter_playground_app`
+- `flutter run`
 
 ## Web
 - Connect a device or start a simulator
@@ -26,13 +26,12 @@ A basic Flutter app to showcase some of my skills and test things. It has an app
 ## Android
 - Connect a device or start a simulator
 - `flutter devices`
-- `flutter run -d device name`
+- `flutter run -d <device-name>`
 
 ## IOS
 - Connect a device or start a simulator
 - `flutter devices`
-- `flutter run -d device name`
-
+- `flutter run -d <device-name>`
 
 # Developing
 
@@ -48,7 +47,11 @@ A basic Flutter app to showcase some of my skills and test things. It has an app
 - Then melos can be used to update the multiple packages or it can be done manually
   - `dart pub global activate melos`
   - `melos run pub_get`
-
+- Using without melos
+  - `cd ./flutter_shared`
+    - `flutter pub get`
+  - `cd ./flutter_playground_app`
+    - `flutter pub get`
 
 ## Turn on Husky for precommits
 `dart run husky install`

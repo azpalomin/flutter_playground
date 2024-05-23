@@ -36,18 +36,18 @@ class ColorSchemeExample extends StatelessWidget {
             const SizedBox(width: 32),
             Column(
               children: [
-                Text('Background: ', style: Theme.of(context).textTheme.bodyMedium),
-                Container(
-                  width: 32,
-                  height: 32,
-                  color: Theme.of(context).colorScheme.background,
-                ),
-                const SizedBox(height: 16),
                 Text('Surface: ', style: Theme.of(context).textTheme.bodyMedium),
                 Container(
                   width: 32,
                   height: 32,
                   color: Theme.of(context).colorScheme.surface,
+                ),
+                const SizedBox(height: 16),
+                Text('Inverse Surface: ', style: Theme.of(context).textTheme.bodyMedium),
+                Container(
+                  width: 32,
+                  height: 32,
+                  color: Theme.of(context).colorScheme.inverseSurface,
                 ),
                 const SizedBox(height: 16),
                 Text('Error: ', style: Theme.of(context).textTheme.bodyMedium),
@@ -61,18 +61,18 @@ class ColorSchemeExample extends StatelessWidget {
             const SizedBox(width: 32),
             Column(
               children: [
-                Text('On Background: ', style: Theme.of(context).textTheme.bodyMedium),
-                Container(
-                  width: 32,
-                  height: 32,
-                  color: Theme.of(context).colorScheme.onBackground,
-                ),
-                const SizedBox(height: 16),
                 Text('On Surface: ', style: Theme.of(context).textTheme.bodyMedium),
                 Container(
                   width: 32,
                   height: 32,
                   color: Theme.of(context).colorScheme.onSurface,
+                ),
+                const SizedBox(height: 16),
+                Text('On Inverse Surface: ', style: Theme.of(context).textTheme.bodyMedium),
+                Container(
+                  width: 32,
+                  height: 32,
+                  color: Theme.of(context).colorScheme.onInverseSurface,
                 ),
                 const SizedBox(height: 16),
                 Text('On Error: ', style: Theme.of(context).textTheme.bodyMedium),
@@ -143,11 +143,11 @@ class ColorSchemeExample extends StatelessWidget {
                   color: Theme.of(context).colorScheme.surfaceTint,
                 ),
                 const SizedBox(height: 16),
-                Text('Surface Variant: ', style: Theme.of(context).textTheme.bodyMedium),
+                Text('Surface Container: ', style: Theme.of(context).textTheme.bodyMedium),
                 Container(
                   width: 32,
                   height: 32,
-                  color: Theme.of(context).colorScheme.surfaceVariant,
+                  color: Theme.of(context).colorScheme.surfaceContainer,
                 ),
               ],
             ),

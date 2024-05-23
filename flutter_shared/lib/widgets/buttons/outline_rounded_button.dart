@@ -34,7 +34,7 @@ class OutlineRoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RoundedButton(
-      backgroundColor: selected ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.background,
+      backgroundColor: selected ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.surface,
       disabled: disabled ?? false,
       expandable: expandable,
       icon: icon,
@@ -42,10 +42,10 @@ class OutlineRoundedButton extends StatelessWidget {
       iconStart: iconStart,
       mainAxisAlignment: mainAxisAlignment,
       onPressed: onPressed,
-      outlineColor: Theme.of(context).colorScheme.onBackground,
+      outlineColor: Theme.of(context).colorScheme.onSurface,
       pill: pill,
       text: text,
-      textColor: selected ? Theme.of(context).colorScheme.onPrimary : Theme.of(context).colorScheme.onBackground,
+      textColor: selected ? Theme.of(context).colorScheme.onPrimary : Theme.of(context).colorScheme.onSurface,
       width: width,
       child: child,
     );

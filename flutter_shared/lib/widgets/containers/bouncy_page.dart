@@ -47,7 +47,10 @@ class BouncyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: gradientBackgroundColor ?? BoxDecoration(color: Theme.of(context).colorScheme.background),
+      decoration: gradientBackgroundColor ??
+          BoxDecoration(
+            color: Theme.of(context).colorScheme.surface,
+          ),
       child: Stack(
         children: [
           // Add background here

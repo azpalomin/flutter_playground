@@ -44,9 +44,9 @@ class RoundedButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: disabled ? null : onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.onBackground,
+        backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.onSurface,
         disabledBackgroundColor:
-            (backgroundColor ?? Theme.of(context).colorScheme.onBackground).withOpacity(disabled ? .5 : 1),
+            (backgroundColor ?? Theme.of(context).colorScheme.onSurface).withOpacity(disabled ? .5 : 1),
         elevation: 0,
         minimumSize: Size(width ?? (expandable ? double.infinity : 0), 0),
         maximumSize: Size(width ?? double.infinity, double.infinity),
@@ -72,7 +72,7 @@ class RoundedButton extends StatelessWidget {
             if (mainAxisAlignment == MainAxisAlignment.start) const SizedBox(width: 16),
             Icon(
               icon,
-              color: (iconColor ?? textColor ?? Theme.of(context).colorScheme.background).withOpacity(
+              color: (iconColor ?? textColor ?? Theme.of(context).colorScheme.surface).withOpacity(
                 disabled ? .5 : 1,
               ),
               size: 32,
@@ -85,7 +85,7 @@ class RoundedButton extends StatelessWidget {
                   text!,
                   style: textStyle ??
                       Theme.of(context).textTheme.titleMedium!.copyWith(
-                            color: (textColor ?? Theme.of(context).colorScheme.background).withOpacity(
+                            color: (textColor ?? Theme.of(context).colorScheme.surface).withOpacity(
                               disabled ? .5 : 1,
                             ),
                           ),
@@ -97,7 +97,7 @@ class RoundedButton extends StatelessWidget {
             const SizedBox(width: 8),
             Icon(
               icon,
-              color: (iconColor ?? textColor ?? Theme.of(context).colorScheme.background).withOpacity(
+              color: (iconColor ?? textColor ?? Theme.of(context).colorScheme.surface).withOpacity(
                 disabled ? .5 : 1,
               ),
               size: 32,

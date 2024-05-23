@@ -32,7 +32,7 @@ class PrimaryOutlineButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RoundedButton(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       disabled: disabled,
       expandable: expandable,
       icon: icon,
@@ -43,7 +43,7 @@ class PrimaryOutlineButton extends StatelessWidget {
       outlineColor: Theme.of(context).colorScheme.primary,
       pill: pill,
       text: text,
-      textColor: Theme.of(context).colorScheme.onBackground,
+      textColor: Theme.of(context).colorScheme.onSurface,
       width: width,
       child: child,
     );

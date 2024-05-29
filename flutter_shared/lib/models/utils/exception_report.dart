@@ -1,6 +1,6 @@
-import 'package:flutter_shared/types/user/full_user.dart';
-import 'package:flutter_shared/types/utils/app_platform_info.dart';
-import 'package:flutter_shared/types/utils/custom_trace.dart';
+import 'package:flutter_shared/models/user/full_user.dart';
+import 'package:flutter_shared/models/utils/app_platform_info.dart';
+import 'package:flutter_shared/models/utils/custom_trace.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'exception_report.g.dart';

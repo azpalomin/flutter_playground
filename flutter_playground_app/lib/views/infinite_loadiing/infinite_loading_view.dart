@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/models/stock_data_entry.dart';
 import 'package:flutter_playground/services/data/stock_data_service.dart';
 import 'package:flutter_shared/widgets/buttons/custom_cursor.dart';
-import 'package:flutter_shared/widgets/containers/page_container.dart';
+import 'package:flutter_shared/widgets/containers/view_container.dart';
 import 'package:flutter_shared/widgets/lists/infinite_list_builder.dart';
 
 @RoutePage(name: 'InfiniteLoading')
@@ -17,7 +17,7 @@ class InfiniteLoadingView extends StatefulWidget {
 class _InfiniteLoadingViewState extends State<InfiniteLoadingView> {
   @override
   Widget build(BuildContext context) {
-    return PageContainer(
+    return ViewContainer(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(

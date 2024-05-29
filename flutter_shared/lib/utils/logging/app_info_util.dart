@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_shared/types/utils/app_platform_info.dart';
-import 'package:flutter_shared/utils/environment.dart';
+import 'package:flutter_shared/models/utils/app_platform_info.dart';
+import 'package:flutter_shared/utils/logging/environment.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class AppInfoUtil {

@@ -19,7 +19,7 @@ class OutlineRoundedButton extends StatelessWidget {
     super.key,
     this.child,
     this.disabled,
-    this.expandable = true,
+    this.expandable = false,
     this.icon,
     this.iconColor,
     this.iconStart = true,

@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shared/dialog/generic_dialog.dart';
 import 'package:flutter_shared/exceptions/data_exceptions.dart';
 import 'package:flutter_shared/exceptions/util_exceptions.dart';
+import 'package:flutter_shared/models/user/full_user.dart';
+import 'package:flutter_shared/models/utils/exception_report.dart';
 import 'package:flutter_shared/services/utils/api_service.dart';
-import 'package:flutter_shared/types/user/full_user.dart';
-import 'package:flutter_shared/types/utils/exception_report.dart';
-import 'package:flutter_shared/utils/app_info_util.dart';
-import 'package:flutter_shared/utils/logger.dart';
+import 'package:flutter_shared/utils/logging/app_info_util.dart';
+import 'package:flutter_shared/utils/logging/logger.dart';
 
 class ExceptionCatcher {
   static Future<void> generalException(

@@ -23,7 +23,7 @@ class RoundedButton extends StatelessWidget {
     this.backgroundColor,
     this.child,
     this.disabled = false,
-    this.expandable = true,
+    this.expandable = false,
     this.icon,
     this.iconColor,
     this.iconStart = true,
@@ -45,8 +45,9 @@ class RoundedButton extends StatelessWidget {
       onPressed: disabled ? null : onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.onSurface,
-        disabledBackgroundColor:
-            (backgroundColor ?? Theme.of(context).colorScheme.onSurface).withOpacity(disabled ? .5 : 1),
+        disabledBackgroundColor: (backgroundColor ?? Theme.of(context).colorScheme.onSurface).withOpacity(
+          disabled ? .5 : 1,
+        ),
         elevation: 0,
         minimumSize: Size(width ?? (expandable ? double.infinity : 0), 0),
         maximumSize: Size(width ?? double.infinity, double.infinity),

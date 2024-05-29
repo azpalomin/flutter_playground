@@ -1,4 +1,4 @@
-import 'package:flutter_shared/types/utils/error_location.dart';
+import 'package:flutter_shared/models/utils/error_location.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'custom_trace.g.dart';

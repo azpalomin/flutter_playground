@@ -18,7 +18,7 @@ class BasicButton extends StatelessWidget {
     super.key,
     this.child,
     this.disabled = false,
-    this.expandable = true,
+    this.expandable = false,
     this.icon,
     this.iconColor,
     this.iconStart = true,

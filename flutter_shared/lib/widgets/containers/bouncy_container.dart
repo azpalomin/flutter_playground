@@ -22,7 +22,7 @@ class BouncyContainer extends StatelessWidget {
     super.key,
     this.bottom,
     required this.children,
-    this.crossAxisAlignment = CrossAxisAlignment.center,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
     this.isBouncy = true,
     this.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.onDrag,
     this.mainAxisAlignment = MainAxisAlignment.start,

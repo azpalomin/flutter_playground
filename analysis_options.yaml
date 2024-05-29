@@ -4,7 +4,10 @@ analyzer:
   exclude:
     - 'build/**'
     - '**/*.g.dart'
-    - '**/firebase_options.dart'
+    - '**/*.freezed.dart'
+    - '**/*.gr.dart'
+  errors:
+    invalid_annotation_target: ignore
 
 linter:
   rules:
@@ -42,4 +45,4 @@ linter:
     use_if_null_to_convert_nulls_to_bools: true
     use_is_even_rather_than_modulo: true
     use_named_constants: true
-    
+  

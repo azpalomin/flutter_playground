@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter_shared/exceptions/data_exceptions.dart';
 import 'package:flutter_shared/services/utils/device_connectivity_service.dart';
-import 'package:flutter_shared/utils/environment.dart';
+import 'package:flutter_shared/utils/logging/environment.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {

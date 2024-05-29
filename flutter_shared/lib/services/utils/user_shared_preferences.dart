@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shared/constants/utils/preferences_constants.dart';
-import 'package:flutter_shared/types/user/full_user.dart';
+import 'package:flutter_shared/models/user/full_user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserSharedPreferences {

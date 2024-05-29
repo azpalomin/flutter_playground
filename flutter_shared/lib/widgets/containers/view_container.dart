@@ -39,32 +39,23 @@ class ViewContainer extends StatelessWidget {
               bottomNavigationBar: bottomNavigationBar,
               drawer: drawer,
               resizeToAvoidBottomInset: true,
-              body: Container(
-                constraints: BoxConstraints(
-                  maxWidth: maxWidth,
-                ),
-                padding: EdgeInsets.only(
-                  bottom: bottomNavigationBar == null && showBottomSafeArea
-                      ? MediaQuery.of(context).viewInsets.bottom + MediaQuery.of(context).viewPadding.bottom
-                      : 0,
-                  top: appBar == null && showTopSafeArea
-                      ? MediaQuery.of(context).viewPadding.top + MediaQuery.of(context).padding.top
-                      : 0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: body,
-                          ),
-                        ],
-                      ),
+              body: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    constraints: BoxConstraints(maxWidth: maxWidth),
+                    padding: EdgeInsets.only(
+                      bottom: bottomNavigationBar == null && showBottomSafeArea
+                          ? MediaQuery.of(context).viewInsets.bottom + MediaQuery.of(context).viewPadding.bottom
+                          : 0,
+                      top: appBar == null && showTopSafeArea
+                          ? MediaQuery.of(context).viewPadding.top + MediaQuery.of(context).padding.top
+                          : 0,
                     ),
-                  ],
-                ),
+                    width: MediaQuery.of(context).size.width,
+                    child: body,
+                  ),
+                ],
               ),
             ),
           ),

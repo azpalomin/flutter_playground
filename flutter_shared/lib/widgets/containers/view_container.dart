@@ -3,7 +3,7 @@ import 'package:flutter_shared/constants/ui/size_constants.dart';
 
 class ViewContainer extends StatelessWidget {
   final PreferredSizeWidget? appBar;
-  final Widget body;
+  final Widget? body;
   final Widget? bottomNavigationBar;
   final Widget? drawer;
   final double maxWidth;
@@ -14,7 +14,7 @@ class ViewContainer extends StatelessWidget {
   const ViewContainer({
     super.key,
     this.appBar,
-    required this.body,
+    this.body,
     this.bottomNavigationBar,
     this.drawer,
     this.maxWidth = defaultMaxWidth,
